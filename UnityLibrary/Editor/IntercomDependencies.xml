@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Native Intercom SDK dependencies, resolved by the External Dependency Manager
+  for Unity (EDM4U). EDM4U reads every *Dependencies.xml under an Editor folder.
+
+  Android: EDM4U injects these Maven artifacts into the generated Gradle build,
+  so the Intercom Android classes are on the same classpath as the Java in
+  Plugins/Android/src that Unity copies into unityLibrary/src/main/java.
+  Do NOT also declare them in a hand-edited mainTemplate.gradle or a stray
+  Plugins/Android/build.gradle: dependencies declared outside EDM4U's managed
+  region bypass its cross-SDK version conflict resolution and can produce
+  conflicting transitive versions (AndroidX, Kotlin, etc.) at build time.
+  No <repositories> block is needed — io.intercom.android is published to Maven
+  Central, which Unity's settingsTemplate.gradle already declares.
+
+  iOS: EDM4U adds the Intercom Swift Package to the generated Xcode project.
+  intercom-ios-sp is Intercom's Swift Package Manager distribution of the
+  native iOS SDK; no CocoaPods and no vendored framework required.
+
+  Toolchain note: the Intercom Android SDK publishes AAR metadata that requires
+  Target API Level 36, Android Gradle Plugin 8.9.1+, and Gradle 8.11.1+ in the
+  consuming project — see README.md.
+
+  EDM4U itself is delivered as a UPM dependency (see package.json). The
+  consuming project must have the OpenUPM scoped registry configured for
+  com.google.external-dependency-manager — see README.md.
+-->
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="io.intercom.android:intercom-sdk-base:18.9.0" />
+    <androidPackage spec="io.intercom.android:intercom-sdk-fcm:18.9.0" />
+  </androidPackages>
+  <remoteSwiftPackage url="https://github.com/intercom/intercom-ios-sp.git" version="19.8.0">
+    <swiftPackage name="Intercom" />
+  </remoteSwiftPackage>
+</dependencies>

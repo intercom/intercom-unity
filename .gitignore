@@ -1,0 +1,42 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Packaging artifacts
+dist/
+*.tgz
+node_modules/
+
+# Unity artifacts (if this folder is ever opened inside a Unity project)
+Library/
+Temp/
+Logs/
+UserSettings/
+
+# Intercom credentials — never commit config assets
+Sample/Assets/IntercomConfig*.asset
+Sample/Assets/IntercomConfig*.asset.meta
+
+# Sample project generated state
+Sample/Builds/
+Sample/builds/
+Sample/build/
+Sample/obj/
+Sample/.utmp/
+Sample/ProjectSettings/AndroidResolverDependencies.xml
+Sample/Assets/AssetStoreTools*
+
+# Stray .meta files Unity generated while the sample lived inside the package.
+# A standalone project has no .meta for its root folders or ProjectSettings.
+Sample/*.meta
+Sample/ProjectSettings/*.meta
+Sample/Packages/*.meta
+
+# IDE
+.idea/
+.vscode/
+*.csproj
+*.csproj.meta
+*.sln
+*.slnx
+*.slnx.meta

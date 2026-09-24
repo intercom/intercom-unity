@@ -1,0 +1,9 @@
+<!--
+  Preserves the Intercom runtime assembly from IL2CPP managed code stripping.
+  IntercomConfig is reached via serialization (a ScriptableObject asset); without
+  this, aggressive stripping can remove the type so the asset deserializes to null
+  at runtime and initialization silently no-ops.
+-->
+<linker>
+  <assembly fullname="Intercom.Runtime" preserve="all" />
+</linker>
