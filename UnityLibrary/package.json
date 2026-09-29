@@ -1,0 +1,42 @@
+{
+  "name": "com.intercom.unity",
+  "version": "0.1.0",
+  "displayName": "Intercom Unity Wrapper",
+  "description": "A Unity wrapper for the Intercom SDK, allowing you to easily integrate Intercom's customer messaging platform into your Unity applications.",
+  "unity": "6000.2",
+  "dependencies": {
+    "com.google.external-dependency-manager": "1.2.187"
+  },
+  "keywords": [
+    "intercom",
+    "fin",
+    "messaging",
+    "customer support",
+    "chat",
+    "live chat",
+    "push notifications",
+    "android",
+    "ios"
+  ],
+  "author": {
+    "name": "Intercom",
+    "email": "support@intercom.io",
+    "url": "https://www.intercom.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intercom/intercom-unity.git"
+  },
+  "documentationUrl": "https://github.com/intercom/intercom-unity/blob/main/README.md",
+  "licensesUrl": "https://github.com/intercom/intercom-unity/blob/main/LICENSE",
+  "files": [
+    "Runtime",
+    "Editor",
+    "Plugins",
+    "*.meta",
+    "Documentation~",
+    "README.md",
+    "LICENSE"
+  ]
+}
